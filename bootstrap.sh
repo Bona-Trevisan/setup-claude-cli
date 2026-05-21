@@ -13,7 +13,7 @@
 #     Suporte macOS via Homebrew.
 #
 # Uso:
-#   curl -fsSL https://raw.githubusercontent.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/main/bootstrap.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/Bona-Trevisan/setup-claude-cli/main/bootstrap.sh | bash
 # ============================================
 
 set -e
@@ -38,7 +38,7 @@ echo "============================================"
 if [[ "$OS" == "ubuntu" ]]; then
   if [[ "$EUID" -ne 0 ]]; then
     echo "ERRO: rode como root no Ubuntu."
-    echo "Tenta: sudo bash <(curl -fsSL https://raw.githubusercontent.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/main/bootstrap.sh)"
+    echo "Tenta: sudo bash <(curl -fsSL https://raw.githubusercontent.com/Bona-Trevisan/setup-claude-cli/main/bootstrap.sh)"
     exit 1
   fi
 
@@ -102,9 +102,9 @@ if [[ "$OS" == "ubuntu" ]]; then
 
   # Baixa SETUP-AGENTE.md pra /root/
   echo ">> Baixando SETUP-AGENTE.md..."
-  curl -fsSL https://raw.githubusercontent.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/main/SETUP-AGENTE.md \
+  curl -fsSL https://raw.githubusercontent.com/Bona-Trevisan/setup-claude-cli/main/SETUP-AGENTE.md \
     -o /root/SETUP-AGENTE.md
-  curl -fsSL https://raw.githubusercontent.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/main/.env.example \
+  curl -fsSL https://raw.githubusercontent.com/Bona-Trevisan/setup-claude-cli/main/.env.example \
     -o /root/.env.example
 
   HOME_DIR="/root"
@@ -149,9 +149,9 @@ if [[ "$OS" == "macos" ]]; then
   npm install -g pm2
 
   # Baixa SETUP-AGENTE.md pra ~
-  curl -fsSL https://raw.githubusercontent.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/main/SETUP-AGENTE.md \
+  curl -fsSL https://raw.githubusercontent.com/Bona-Trevisan/setup-claude-cli/main/SETUP-AGENTE.md \
     -o $HOME/SETUP-AGENTE.md
-  curl -fsSL https://raw.githubusercontent.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/main/.env.example \
+  curl -fsSL https://raw.githubusercontent.com/Bona-Trevisan/setup-claude-cli/main/.env.example \
     -o $HOME/.env.example
 
   HOME_DIR="$HOME"
