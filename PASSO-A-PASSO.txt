@@ -4,7 +4,7 @@ COMO CRIAR UM AGENTE CLAUDE CODE + TELEGRAM v3
 ========================================
 
 Repositorio:
-https://github.com/{{GITHUB_USERNAME}}/agente-claude-telegram-setup-alunos-denderson
+https://github.com/{{GITHUB_USERNAME}}/setup-claude-cli
 
 VERSAO 3 (abril 2026) - novidades vs v2:
 - agent-manager.py via PM2 (porta 3600 + Caddy + Cloudflare tunnel)
@@ -55,10 +55,10 @@ PASSO 2 - INSTALAR DEPENDENCIAS (1 COMANDO)
 ========================================
 
 Linux (root):
-   curl -fsSL https://raw.githubusercontent.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/main/bootstrap.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/Bona-Trevisan/setup-claude-cli/main/bootstrap.sh | bash
 
 macOS (usuario normal):
-   curl -fsSL https://raw.githubusercontent.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/main/bootstrap.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/Bona-Trevisan/setup-claude-cli/main/bootstrap.sh | bash
 
 Instala: Node 22, Python 3, ffmpeg, Claude Code CLI 2.1.118 (pinado),
 tmux, PostgreSQL 16 + pgvector, Caddy, pm2 globalmente.
@@ -260,4 +260,4 @@ PROBLEMAS COMUNS
 FIM v3
 ========================================
 
-Issues: https://github.com/{{GITHUB_USERNAME}}/agente-claude-telegram-setup-alunos-denderson/issues
+Issues: https://github.com/{{GITHUB_USERNAME}}/setup-claude-cli/issues
