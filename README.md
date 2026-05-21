@@ -41,7 +41,7 @@ Instala um agente Claude Code conectado ao Telegram em qualquer VPS Ubuntu 22+ o
 ### 1. Na VPS limpa (Ubuntu 22.04+) ou no Mac:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/main/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Bona-Trevisan/setup-claude-cli/main/bootstrap.sh | bash
 ```
 
 Linux: roda como `root`. Mac: roda como usuario normal (sem sudo na chamada). O script detecta o SO e instala o que precisa.
@@ -136,7 +136,7 @@ Se ja tem agente v2 rodando, pra adicionar features v3:
 
 ## Issues / Suporte
 
-https://github.com/denderson2013-bot/agente-claude-telegram-setup-alunos-denderson/issues
+https://github.com/Bona-Trevisan/setup-claude-cli/issues
 
 ## Como personalizar (placeholders)
 
