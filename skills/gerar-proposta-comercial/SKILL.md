@@ -115,7 +115,7 @@ O script faz git init + gh repo create + vercel deploy + cloudflare DNS automati
 
 ## Variaveis de ambiente obrigatorias
 
-O aluno precisa configurar em `/opt/naia-agent/.env` (ou no `.env` do projeto) antes de rodar:
+O aluno precisa configurar em `/opt/steve-agent/.env` (ou no `.env` do projeto) antes de rodar:
 - `GH_TOKEN` — Personal Access Token do GitHub com escopo `repo`
 - `GH_USER` — username do GitHub do aluno (ex: `meu-bot`)
 - `VERCEL_TOKEN` — Token da Vercel

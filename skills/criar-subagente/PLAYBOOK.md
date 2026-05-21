@@ -52,7 +52,7 @@ Exemplos:
 
 | Pergunta | Se 0-1 SIM | Se 2 SIM | Se 3-4 SIM |
 |---|---|---|---|
-| Conclusao | ADAPTAR existente | Discutir com Naia | CRIAR novo |
+| Conclusao | ADAPTAR existente | Discutir com Steve | CRIAR novo |
 
 ---
 
@@ -163,7 +163,7 @@ Diferenca pratica:
 - [ ] Description com 3+ triggers reais
 - [ ] System prompt em PT-BR
 - [ ] Sem travessoes no prompt
-- [ ] Hierarquia clara (reporta pra Naia)
+- [ ] Hierarquia clara (reporta pra Steve)
 - [ ] Tools minimas necessarias (revisado em CATALOGO-TOOLS.md)
 - [ ] Modelo apropriado (sonnet default)
 - [ ] Testado com 1 prompt simples

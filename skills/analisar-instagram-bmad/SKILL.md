@@ -57,7 +57,7 @@ Usar `template-dossie.html` e substituir placeholders:
 - `{{GERADO_EM}}` (timestamp BRT)
 
 ### Etapa 5: Deploy
-1. Le `DOMINIO_BASE` do .env do agente (`/opt/naia-agent/.env` ou env exportada). Se nao existir, aborta e instrui o aluno: "Falta configurar DOMINIO_BASE no /opt/naia-agent/.env. Te explico como." e mostra o passo a passo.
+1. Le `DOMINIO_BASE` do .env do agente (`/opt/steve-agent/.env` ou env exportada). Se nao existir, aborta e instrui o aluno: "Falta configurar DOMINIO_BASE no /opt/steve-agent/.env. Te explico como." e mostra o passo a passo.
 2. Define `FQDN="${USERNAME_INSTAGRAM}.${DOMINIO_BASE}"` (ex: `joaodasilva.meunegocio.com.br`).
 3. `git init` na pasta de output
 4. `gh repo create $GH_OWNER/dossie-USERNAME --private --source=. --push`
@@ -86,7 +86,7 @@ A skill entrega prompts e template prontos. Voce, agente que executa, monta o pi
 
 ### Variaveis de ambiente necessarias
 
-O aluno cadastra no `/opt/naia-agent/.env` do agente dele (NAO no codigo da skill). A skill apenas le essas variaveis em runtime:
+O aluno cadastra no `/opt/steve-agent/.env` do agente dele (NAO no codigo da skill). A skill apenas le essas variaveis em runtime:
 
 ```
 # IA
@@ -104,7 +104,7 @@ GH_OWNER=meunegocio-bot               # owner/org no GitHub do aluno (user ou or
 
 Se `DOMINIO_BASE` nao estiver setado, o agente ABORTA o deploy e responde:
 
-> "Falta configurar `DOMINIO_BASE` no /opt/naia-agent/.env. Te explico como."
+> "Falta configurar `DOMINIO_BASE` no /opt/steve-agent/.env. Te explico como."
 
 E mostra o passo a passo (ver secao "Como o aluno configura o dominio dele" no PLAYBOOK-BMAD.md).
 

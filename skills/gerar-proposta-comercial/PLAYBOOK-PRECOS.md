@@ -109,7 +109,7 @@ Quando o projeto e em equity ou parceria estrategica, trocar tab "Investimento" 
 Sem investimento, foco em execucao e cronograma.
 
 ### Briefing pre-call
-Uso interno (Naia/Chefe), nao tem tab Investimento.
+Uso interno (Steve/Chefe), nao tem tab Investimento.
 
 ## Como decidir na pratica
 

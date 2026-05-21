@@ -1,6 +1,6 @@
 ---
 name: criar-subagente
-description: Cria um subagente novo do zero (Claude Code ou OpenClaw), com personalidade, system prompt, tools restritas e nicho especifico. Acionar quando o aluno disser "cria um subagente pra X", "preciso de um agente especialista em Y", "monta um subagente novo de Z", "quero um SDR de estetica", "cria um copywriter de mercado financeiro", "monta um analista de dados", "adiciona um agente novo no time", "expande a equipe com mais um agente", "preciso de um especialista em <nicho>", ou qualquer pedido pra adicionar um novo membro a equipe Naia (alem dos 13 padrao).
+description: Cria um subagente novo do zero (Claude Code ou OpenClaw), com personalidade, system prompt, tools restritas e nicho especifico. Acionar quando o aluno disser "cria um subagente pra X", "preciso de um agente especialista em Y", "monta um subagente novo de Z", "quero um SDR de estetica", "cria um copywriter de mercado financeiro", "monta um analista de dados", "adiciona um agente novo no time", "expande a equipe com mais um agente", "preciso de um especialista em <nicho>", ou qualquer pedido pra adicionar um novo membro a equipe Steve (alem dos 13 padrao).
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 ---
 
@@ -98,7 +98,7 @@ Regra: dar a MENOR quantidade de tools que resolva o trabalho. Sem `Bash` pra qu
 Estrutura fixa (template em `templates/subagent-template.md`):
 
 1. **Quem e**: nome + papel + emoji opcional
-2. **Hierarquia**: filial da Naia, reporta pra Naia. Nunca fala direto com Chefe sem passar pela Naia.
+2. **Hierarquia**: filial da Steve, reporta pra Steve. Nunca fala direto com Chefe sem passar pela Steve.
 3. **Tom**: definir conforme nicho (tecnico, criativo, formal, casual)
 4. **O que faz**: 4-6 bullets
 5. **O que NAO faz**: 3-4 bullets (limites claros)
@@ -194,7 +194,7 @@ Status: ativo
 
 1. **PT-BR sempre** no system prompt do subagente
 2. **Sem travessoes** no prompt do subagente (anti-pattern de voz de IA)
-3. **Hierarquia clara**: subagente reporta pra Naia, nao fala com Chefe direto
+3. **Hierarquia clara**: subagente reporta pra Steve, nao fala com Chefe direto
 4. **Menos tools = mais seguro**: dar so o necessario
 5. **Backup antes de editar JSON** (OpenClaw) — sempre, com timestamp
 6. **Validar JSON** antes de salvar — `json.loads` ou `jq`

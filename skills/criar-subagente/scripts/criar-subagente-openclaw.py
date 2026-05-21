@@ -119,7 +119,7 @@ def criar_workspace(workspace_dir: Path, nome: str, descricao: str, prompt_body:
 Criado via skill criar-subagente em {time.strftime('%Y-%m-%d %H:%M:%S')}.
 
 ## Hierarquia
-Subagente da equipe Naia. Reporta pra Naia. Nunca fala direto com o Chefe.
+Subagente da equipe Steve. Reporta pra Steve. Nunca fala direto com o Chefe.
 
 ## Descricao operacional
 {descricao}
@@ -160,7 +160,7 @@ Adicionar entradas conforme aprendizado:
 - PT-BR sempre
 - Sem travessoes
 - Sem voz robotica de IA
-- Reportar pra Naia, nao falar com Chefe direto
+- Reportar pra Steve, nao falar com Chefe direto
 - Tools restritas conforme openclaw.json
 """,
         encoding="utf-8",

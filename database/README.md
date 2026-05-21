@@ -1,6 +1,6 @@
-# Database Schema — naia_memory
+# Database Schema — steve_memory
 
-Schema completo do banco PostgreSQL usado pelo agente Naia (memoria vetorial, SDR, DMs, transcricoes).
+Schema completo do banco PostgreSQL usado pelo agente Steve (memoria vetorial, SDR, DMs, transcricoes).
 
 - **Engine**: PostgreSQL 14+ (testado em 14.22)
 - **Extensao obrigatoria**: `pgvector`
@@ -20,22 +20,22 @@ Schema completo do banco PostgreSQL usado pelo agente Naia (memoria vetorial, SD
 
 ```bash
 # Criar database (ajuste o usuario conforme seu ambiente)
-createdb -h 127.0.0.1 -U postgres naia_memory
+createdb -h 127.0.0.1 -U postgres steve_memory
 
 # Habilitar pgvector dentro do banco recem-criado
-psql -h 127.0.0.1 -U postgres -d naia_memory -c "CREATE EXTENSION IF NOT EXISTS vector;"
+psql -h 127.0.0.1 -U postgres -d steve_memory -c "CREATE EXTENSION IF NOT EXISTS vector;"
 ```
 
 ### 3. Aplicar o schema
 
 ```bash
-psql -h 127.0.0.1 -U postgres -d naia_memory -f schema.sql
+psql -h 127.0.0.1 -U postgres -d steve_memory -f schema.sql
 ```
 
 ### 4. Validar
 
 ```bash
-psql -h 127.0.0.1 -U postgres -d naia_memory -c "\dt"
+psql -h 127.0.0.1 -U postgres -d steve_memory -c "\dt"
 # Deve listar 24 tabelas
 ```
 
@@ -109,6 +109,6 @@ Sistema de agentes SDR (Davi, Lucas, Felipe, etc).
 Caso o schema mude em producao, regere com:
 
 ```bash
-ssh root@{{VPS_IP}} "PGPASSWORD=*** pg_dump -h 127.0.0.1 -U n8n -s --no-owner --no-privileges --no-comments naia_memory" > schema.sql
+ssh root@{{VPS_IP}} "PGPASSWORD=*** pg_dump -h 127.0.0.1 -U n8n -s --no-owner --no-privileges --no-comments steve_memory" > schema.sql
 # E remova manualmente as linhas \restrict / \unrestrict no inicio e fim
 ```

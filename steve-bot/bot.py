@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Naia Telegram Bot - External daemon
+Steve Telegram Bot - External daemon
 Independente do Claude Code. NUNCA morre quando Claude reinicia.
 - Recebe msgs via long polling (resilient)
-- Salva em inbox/, notifica Naia via tmux send-keys
+- Salva em inbox/, notifica Steve via tmux send-keys
 - Watch outbox/ e envia respostas via API
 """
 import os, json, time, logging, signal, sys, subprocess, threading
@@ -11,7 +11,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 import requests
 
-BOT_DIR = Path('/Users/naiarodrigues/naia-bot')
+BOT_DIR = Path('/Users/steverodrigues/steve-bot')
 INBOX = BOT_DIR / 'inbox'
 OUTBOX = BOT_DIR / 'outbox'
 SENT = BOT_DIR / 'sent'
@@ -32,8 +32,8 @@ if not TOKEN:
     sys.exit('TELEGRAM_BOT_TOKEN missing')
 
 ALLOWED_USERS = set(env.get('ALLOWED_USERS', '{{TELEGRAM_USER_ID_DONO}}').split(','))
-TMUX_SESSION = env.get('TMUX_SESSION', 'naia')
-TMUX_USER = env.get('TMUX_USER', 'naia')
+TMUX_SESSION = env.get('TMUX_SESSION', 'steve')
+TMUX_USER = env.get('TMUX_USER', 'steve')
 
 for d in (INBOX, OUTBOX, SENT, PROCESSED, STATE, LOGS):
     d.mkdir(parents=True, exist_ok=True)
@@ -59,9 +59,9 @@ typing_until = {}
 typing_lock = threading.Lock()
 running = True
 
-# Debounce: aguarda N segundos sem nova msg antes de injetar pra Naia.
+# Debounce: aguarda N segundos sem nova msg antes de injetar pra Steve.
 # Quando chega nova msg, reseta o timer. Permite o usuario mandar msgs quebradas
-# em sequencia que sao agrupadas como contexto unico antes de chegar na Naia.
+# em sequencia que sao agrupadas como contexto unico antes de chegar na Steve.
 DEBOUNCE_SECONDS = float(env.get('DEBOUNCE_SECONDS', '8'))
 pending_buffer = []  # list of dicts: {msg_id, text, user, chat_id}
 debounce_timer = None
@@ -89,7 +89,7 @@ def flush_pending():
         joined = '\n'.join(i['text'] for i in items)
         text = f'[debounced {len(items)} msgs ids={ids}] {joined}'
         log.info(f'debounce flush: {len(items)} msgs combinadas, last_id={msg_id}')
-    notify_naia(msg_id, text, user)
+    notify_steve(msg_id, text, user)
 
 def enqueue_message(msg_id, text, user, chat_id):
     """Adiciona msg ao buffer e (re)agenda o flush para DEBOUNCE_SECONDS."""
@@ -124,7 +124,7 @@ def get_offset():
 def save_offset(uid):
     (STATE / 'last-update-id.txt').write_text(str(uid))
 
-def notify_naia(msg_id, text, user):
+def notify_steve(msg_id, text, user):
     try:
         # Escapa aspas e quebras de linha pra tmux
         safe = text.replace('\\', '\\\\').replace('"', '\\"').replace('\n', ' ')
@@ -144,9 +144,9 @@ def notify_naia(msg_id, text, user):
             check=False, timeout=5,
             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
         )
-        log.info(f'Naia notificada msg_id={msg_id}')
+        log.info(f'Steve notificada msg_id={msg_id}')
     except Exception as e:
-        log.error(f'notify_naia error: {e}')
+        log.error(f'notify_steve error: {e}')
 
 def react(chat_id, msg_id, emoji='👀'):
     try:
@@ -410,7 +410,7 @@ def outbox_loop():
         time.sleep(2)
 
 if __name__ == '__main__':
-    log.info('=== Naia Telegram Bot iniciando ===')
+    log.info('=== Steve Telegram Bot iniciando ===')
     try:
         r = requests.get(f'{API}/getMe', timeout=10)
         info = r.json().get('result', {})

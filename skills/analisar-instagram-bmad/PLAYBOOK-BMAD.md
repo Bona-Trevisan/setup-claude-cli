@@ -124,7 +124,7 @@ A skill NAO usa o dominio do Denderson. Cada aluno usa o proprio dominio. O subd
 3. Ter conta no Vercel com um team/scope ativo.
 4. Ter conta no GitHub (user ou organization).
 
-### Variaveis que o aluno cadastra no /opt/naia-agent/.env
+### Variaveis que o aluno cadastra no /opt/steve-agent/.env
 
 ```bash
 # Dominio raiz do aluno (sem http, sem subdominio)

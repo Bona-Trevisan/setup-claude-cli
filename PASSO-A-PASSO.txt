@@ -137,15 +137,15 @@ PASSO 7 - TESTAR
 2. Manda "oi"
 3. Ve reacao olhinho (bot recebeu)
 4. Ve "digitando..."
-5. Recebe resposta da Naia em FASE 1 (em ate 10s)
-6. Naia executa em FASE 2
-7. Naia entrega em FASE 3
+5. Recebe resposta da Steve em FASE 1 (em ate 10s)
+6. Steve executa em FASE 2
+7. Steve entrega em FASE 3
 
 Audio:
 1. Manda audio (voice message)
 2. Bot baixa, Whisper transcreve PT-BR
-3. Naia processa
-4. Naia decide responder em texto OU audio
+3. Steve processa
+4. Steve decide responder em texto OU audio
 
 
 ========================================

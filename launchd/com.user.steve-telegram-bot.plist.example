@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.{{DONO_SLUG}}.naia-telegram-bot</string>
+    <string>com.{{DONO_SLUG}}.steve-telegram-bot</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/naiarodrigues/.pyenv/versions/3.12.8/bin/python3</string>
-        <string>/Users/naiarodrigues/naia-bot/bot.py</string>
+        <string>/Users/steverodrigues/.pyenv/versions/3.12.8/bin/python3</string>
+        <string>/Users/steverodrigues/steve-bot/bot.py</string>
     </array>
     <key>WorkingDirectory</key>
-    <string>/Users/naiarodrigues/naia-bot</string>
+    <string>/Users/steverodrigues/steve-bot</string>
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>
     <true/>
     <key>StandardOutPath</key>
-    <string>/Users/naiarodrigues/naia-bot/logs/launchd-stdout.log</string>
+    <string>/Users/steverodrigues/steve-bot/logs/launchd-stdout.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/naiarodrigues/naia-bot/logs/launchd-stderr.log</string>
+    <string>/Users/steverodrigues/steve-bot/logs/launchd-stderr.log</string>
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>

@@ -10,7 +10,7 @@
 #   7. cria registro DNS A no Cloudflare apontando para 76.76.21.21
 #
 # REQUISITOS:
-#  - .env carregado (em /opt/naia-agent/.env OU ./.env)
+#  - .env carregado (em /opt/steve-agent/.env OU ./.env)
 #  - Vars obrigatorias: GH_TOKEN, GH_USER, VERCEL_TOKEN, VERCEL_SCOPE,
 #                       CLOUDFLARE_DNS_TOKEN, CLOUDFLARE_ZONE_ID, DOMINIO_BASE
 #  - Tools: git, gh (GitHub CLI), vercel (Vercel CLI), curl, jq
@@ -27,7 +27,7 @@ set -Eeuo pipefail
 # 1) Carregar .env
 # ---------------------------------------------------------------
 ENV_LOADED=0
-for ENV_FILE in "/opt/naia-agent/.env" "./.env" "$(dirname "$0")/../../.env"; do
+for ENV_FILE in "/opt/steve-agent/.env" "./.env" "$(dirname "$0")/../../.env"; do
   if [[ -f "$ENV_FILE" ]]; then
     set -a
     # shellcheck disable=SC1090
@@ -66,7 +66,7 @@ Exemplo: se DOMINIO_BASE=agencia.com.br, a LP vai pra:
 
 PARA CONFIGURAR:
 
-1. Edite /opt/naia-agent/.env (ou o .env do seu projeto) e adicione:
+1. Edite /opt/steve-agent/.env (ou o .env do seu projeto) e adicione:
      DOMINIO_BASE=seunegocio.com.br
 
 2. No Cloudflare, abra a zone desse dominio e copie o "Zone ID":

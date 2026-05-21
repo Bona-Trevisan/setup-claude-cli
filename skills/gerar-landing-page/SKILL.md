@@ -157,7 +157,7 @@ Mesmas da skill de proposta-comercial (compartilhadas no `.env` do agente):
 Se `DOMINIO_BASE` estiver vazio, o agente para e responde:
 
 > Falta configurar `DOMINIO_BASE` no .env do agente. Te explico como:
-> 1. Edite `/opt/naia-agent/.env`
+> 1. Edite `/opt/steve-agent/.env`
 > 2. Adicione `DOMINIO_BASE=seunegocio.com.br`
 > 3. Configure tambem `CLOUDFLARE_ZONE_ID` (zone do Cloudflare desse dominio) e `CLOUDFLARE_DNS_TOKEN` (token DNS:Edit)
 > 4. Reinicie o agente e tente de novo
